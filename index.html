@@ -46,23 +46,23 @@
   
   <style>
 
-  /* --- 1x2 单列布局样式 --- */
-  .single-column {
+  /* --- 单个视频居中样式 --- */
+  .single-video {
     display: flex; /* 使用 flex 布局 */
-    flex-direction: column; /* 垂直方向排列 */
-    align-items: center; /* 水平居中 */
-    gap: 20px; /* 设置每排视频之间的间距 */
-    margin: 40px 0; /* 整体布局的上下间距 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    flex-direction: column; /* 垂直排列（方便添加标题） */
+    margin: 20px 0; /* 增加上下间距 */
   }
 
-  .single-column video {
+  .single-video video {
     width: 80%; /* 视频宽度占容器的 80% */
     max-width: 800px; /* 限制最大宽度 */
     border-radius: 8px; /* 可选：添加圆角 */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 可选：添加阴影 */
   }
 
-  .single-column h2 {
+  .single-video h2 {
     margin-bottom: 15px; /* 标题与视频的间距 */
     text-align: center; /* 标题居中 */
     font-size: 1.5rem; /* 设置标题字体大小 */
@@ -339,26 +339,14 @@
     </div>
   </div>
 </section>
-
 <section class="section">
   <div class="container is-max-desktop">
-    <div class="single-column">
-      <!-- 第一排视频 -->
-      <div>
-        <h2>First Video</h2>
-        <video controls>
-          <source src="static/videos/video1.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <!-- 第二排视频 -->
-      <div>
-        <h2>Second Video</h2>
-        <video controls>
-          <source src="static/videos/video2.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
+    <div class="single-video">
+      <h2>Center-Aligned Single Video</h2> <!-- 视频标题 -->
+      <video controls>
+        <source src="static/videos/center_video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
   </div>
 </section>
