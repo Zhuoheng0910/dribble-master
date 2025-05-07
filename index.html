@@ -43,6 +43,39 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+  
+  <style>
+  /* --- 新增 CSS 开始 --- */
+  .two-column {
+    display: flex; /* 使用 flexbox 创建两栏布局 */
+    justify-content: space-between; /* 保持两栏之间的间距 */
+    gap: 20px; /* 添加两栏之间的间距 */
+  }
+
+  .video-container {
+    flex: 1; /* 每栏占据相等的宽度 */
+    background: #f4f4f4; /* 可选：设置背景颜色 */
+    border-radius: 8px; /* 可选：圆角边框 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 可选：添加阴影 */
+    overflow: hidden; /* 防止内容溢出 */
+  }
+
+  video {
+    width: 100%; /* 视频占满容器宽度 */
+    height: auto; /* 视频高度自适应 */
+    display: block; /* 移除默认的内联样式影响 */
+  }
+
+  /* 响应式布局：在小屏幕下改为单列 */
+  @media (max-width: 768px) {
+    .two-column {
+      flex-direction: column; /* 切换为单列布局 */
+      gap: 10px; /* 减小间距 */
+    }
+  }
+  /* --- 新增 CSS 结束 --- */
+  </style>
+  
 </head>
 <body>
 
@@ -128,7 +161,6 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
 <!--       <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
         <source src="static/videos/banner_video.mp4"
         type="video/mp4">
       </video> -->
@@ -221,7 +253,28 @@
 </section>
 <!-- End youtube video -->
 
-
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Two-Column Video Layout</h2> <!-- 新增标题 -->
+    <div class="two-column">
+      <!-- 左侧视频 -->
+      <div class="video-container">
+        <video controls>
+          <source src="static/videos/left_video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <!-- 右侧视频 -->
+      <div class="video-container">
+        <video controls>
+          <source src="static/videos/right_video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+  
 <!-- Video carousel -->
 <section class="hero is-small">
   <div class="hero-body">
