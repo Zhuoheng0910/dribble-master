@@ -69,10 +69,10 @@
   }
 
   .single-video video {
-    width: 100%; /* 视频宽度占容器的 80% */
-    max-width: 800px; /* 限制最大宽度 */
-    border-radius: 8px; /* 可选：添加圆角 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 可选：添加阴影 */
+    width: 100%; /* 使用100%宽度 */
+    max-width: none; /* 移除最大宽度限制 */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
   .single-video h2 {
@@ -85,13 +85,13 @@
   .two-column {
     display: flex; /* 使用 flexbox 创建两栏布局 */
     justify-content: space-between; /* 保持两栏之间的间距 */
-    gap: 20px; /* 添加两栏之间的间距 */
+    gap: 10px; /* 添加两栏之间的间距 */
   }
 
   .video-grid {
     display: grid; /* 启用网格布局 */
     grid-template-columns: repeat(2, 1fr); /* 创建两列，均分宽度 */
-    gap: 20px; /* 设置网格项之间的间距 */
+    gap: 10px; /* 设置网格项之间的间距 */
   }
     
   .video-container {
@@ -102,12 +102,15 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 可选：添加阴影 */
     overflow: hidden; /* 防止内容溢出 */
     text-align: center;
+    padding: 0; /* 移除内边距 */
+    margin: 0; /* 移除外边距 */
   }
 
   video {
     width: 100%; /* 视频占满容器宽度 */
     height: auto; /* 视频高度自适应 */
     display: block; /* 移除默认的内联样式影响 */
+    max-height: 80vh; /* 限制最大高度为视口的80% */
   }
 
     /* 子标题样式 */
@@ -117,6 +120,7 @@
       font-weight: bold; /* 加粗子标题 */
       color: #333; /* 子标题颜色 */
       text-align: center;
+      padding: 0 10px; /* 添加少量内边距 */
     }
     
   /* 响应式布局：在小屏幕下改为单列 */
@@ -124,6 +128,13 @@
     .two-column {
       flex-direction: column; /* 切换为单列布局 */
       gap: 10px; /* 减小间距 */
+    }
+        .video-grid {
+      grid-template-columns: 1fr; /* 小屏幕下改为单列 */
+    }
+    
+    video {
+      max-height: 60vh; /* 小屏幕上减小最大高度 */
     }
   }
   /* --- 新增 CSS 结束 --- */
