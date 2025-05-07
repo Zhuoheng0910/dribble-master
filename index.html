@@ -79,7 +79,7 @@
     text-align: center; /* 标题居中 */
     font-size: 1.5rem; /* 设置标题字体大小 */
   }
-    
+  
   /* --- 新增 CSS 开始 --- */
   .two-column {
     display: flex; /* 使用 flexbox 创建两栏布局 */
@@ -107,6 +107,14 @@
     display: block; /* 移除默认的内联样式影响 */
   }
 
+    /* 子标题样式 */
+    .video-subtitle {
+      margin-top: 10px; /* 子标题与视频的间距 */
+      font-size: 1.2rem; /* 子标题的字体大小 */
+      font-weight: bold; /* 加粗子标题 */
+      color: #333; /* 子标题颜色 */
+    }
+    
   /* 响应式布局：在小屏幕下改为单列 */
   @media (max-width: 768px) {
     .two-column {
@@ -320,6 +328,7 @@
           <source src="static/videos/left.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
+        <div class="video-subtitle">Left</div>
       </div>
       <!-- 右侧视频 -->
       <div class="video-container">
@@ -327,6 +336,7 @@
           <source src="static/videos/right.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
+        <div class="video-subtitle">Right</div>
       </div>
     </div>
   </div>
@@ -342,6 +352,7 @@
           <source src="static/videos/change1.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
+        <div class="video-subtitle">Straight + Left Front</div>
       </div>
       <!-- 第二个视频 -->
       <div class="video-container">
@@ -349,6 +360,7 @@
           <source src="static/videos/change2.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
+        <div class="video-subtitle">Straight + Right Front</div>
       </div>
       <!-- 第三个视频 -->
       <div class="video-container">
@@ -356,6 +368,7 @@
           <source src="static/videos/change3.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
+        <div class="video-subtitle">Straight + Left</div>
       </div>
       <!-- 第四个视频 -->
       <div class="video-container">
@@ -363,6 +376,7 @@
           <source src="static/videos/change4.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
+        <div class="video-subtitle">Straight + Right</div>
       </div>
     </div>
   </div>
@@ -403,6 +417,7 @@
           <source src="static/videos/active1.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
+        <div class="video-subtitle">Large-Scale Disturbance</div>
       </div>
       <!-- 右侧视频 -->
       <div class="video-container">
@@ -410,6 +425,7 @@
           <source src="static/videos/active2.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
+        <div class="video-subtitle">Small-Scale Disturbance</div>
       </div>
     </div>
   </div>
