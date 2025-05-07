@@ -46,6 +46,18 @@
   
   <style>
 
+  /* 定义大学 logo 的样式 */
+  .university-logo {
+    width: 50px; /* 自定义 logo 的宽度 */
+    height: auto; /* 保持宽高比 */
+    vertical-align: middle; /* 图片与上标垂直居中对齐 */
+  }
+
+  .author-block sup {
+    vertical-align: top; /* 上标对齐到顶部 */
+    font-size: 0.8em; /* 调整上标大小 */
+  }
+
   /* --- 单个视频居中样式 --- */
   .single-video {
     display: flex; /* 使用 flex 布局 */
@@ -126,9 +138,25 @@
                   </span>
                   </div>
 
-                  <div class="is-size-5 publication-authors">
+<!--                   <div class="is-size-5 publication-authors">
                     <span class="author-block"><sup>1</sup>Tsinghua University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sup>2</sup>Stanford University</span>
                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                  </div> -->
+            
+                  <div class="is-size-5 publication-authors">
+                  <span class="author-block">
+                      <sup>1</sup>
+                      <!-- 清华大学的 logo -->
+                      <img src="static/images/tsinghua_logo.png" alt="Tsinghua University Logo" class="university-logo">
+                      <!-- 图片和文字之间的空格 -->
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <sup>2</sup>
+                      <!-- 斯坦福大学的 logo -->
+                      <img src="static/images/stanford_logo.png" alt="Stanford University Logo" class="university-logo">
+                  </span>
+                      <span class="eql-cntrb">
+                        <small><br><sup>*</sup>Indicates Equal Contribution</small>
+                      </span>
                   </div>
 
                   <div class="column has-text-centered">
