@@ -45,6 +45,29 @@
   <script src="static/js/index.js"></script>
   
   <style>
+
+  /* --- 1x2 单列布局样式 --- */
+  .single-column {
+    display: flex; /* 使用 flex 布局 */
+    flex-direction: column; /* 垂直方向排列 */
+    align-items: center; /* 水平居中 */
+    gap: 20px; /* 设置每排视频之间的间距 */
+    margin: 40px 0; /* 整体布局的上下间距 */
+  }
+
+  .single-column video {
+    width: 80%; /* 视频宽度占容器的 80% */
+    max-width: 800px; /* 限制最大宽度 */
+    border-radius: 8px; /* 可选：添加圆角 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 可选：添加阴影 */
+  }
+
+  .single-column h2 {
+    margin-bottom: 15px; /* 标题与视频的间距 */
+    text-align: center; /* 标题居中 */
+    font-size: 1.5rem; /* 设置标题字体大小 */
+  }
+    
   /* --- 新增 CSS 开始 --- */
   .two-column {
     display: flex; /* 使用 flexbox 创建两栏布局 */
@@ -52,6 +75,12 @@
     gap: 20px; /* 添加两栏之间的间距 */
   }
 
+  .video-grid {
+    display: grid; /* 启用网格布局 */
+    grid-template-columns: repeat(2, 1fr); /* 创建两列，均分宽度 */
+    gap: 20px; /* 设置网格项之间的间距 */
+  }
+    
   .video-container {
     flex: 1; /* 每栏占据相等的宽度 */
     background: #f4f4f4; /* 可选：设置背景颜色 */
@@ -268,6 +297,65 @@
       <div class="video-container">
         <video controls>
           <source src="static/videos/right_video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">2x2 Video Grid Layout</h2> <!-- 新增标题 -->
+    <div class="video-grid">
+      <!-- 第一个视频 -->
+      <div class="video-container">
+        <video controls>
+          <source src="static/videos/video1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <!-- 第二个视频 -->
+      <div class="video-container">
+        <video controls>
+          <source src="static/videos/video2.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <!-- 第三个视频 -->
+      <div class="video-container">
+        <video controls>
+          <source src="static/videos/video3.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <!-- 第四个视频 -->
+      <div class="video-container">
+        <video controls>
+          <source src="static/videos/video4.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="single-column">
+      <!-- 第一排视频 -->
+      <div>
+        <h2>First Video</h2>
+        <video controls>
+          <source src="static/videos/video1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <!-- 第二排视频 -->
+      <div>
+        <h2>Second Video</h2>
+        <video controls>
+          <source src="static/videos/video2.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </div>
