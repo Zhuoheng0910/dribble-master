@@ -25,7 +25,7 @@
 
 
   <title>Dribble Master: Learning Agile Humanoid Ball Manipulation Through Legged Locomotion</title>
-  <link rel="icon" type="image/x-icon" href="static/images/T1.ico">
+  <link rel="icon" type="image/x-icon" href="static/images/T1_b.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -299,22 +299,7 @@
 </section>
 <!-- End youtube video -->
 
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Humanoid soccer dribbling is a highly challenging task that demands dexterous ball manipulation while maintaining dynamic balance. In RoboCup Soccer Competitions, traditional rule-based methods often struggle to achieve accurate ball control due to their reliance on fixed walking patterns and limited adaptability to real-time ball dynamics. To address these challenges, we propose a two-stage learning framework that enables a humanoid robot to acquire dribbling skills without relying on explicit dynamics or predefined trajectories. In the first stage, the robot learns basic locomotion skills; in the second stage, we fine-tune the policy for agile dribbling maneuvers. We further introduce a virtual camera model in simulation and design heuristic rewards to encourage active sensing, promoting a broader visual range for continuous ball perception. The policy is trained in simulation and successfully transferred to a physical humanoid robot. Experimental results demonstrate that our method enables effective ball manipulation, achieving flexible and visually appealing dribbling behaviors across multiple environments. This work highlights the potential of reinforcement learning in developing adaptive humanoid soccer robots.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
+
 
 
 <!-- Image carousel -->
@@ -399,6 +384,30 @@
 
 <section class="section">
   <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Ball Recovery via Active Sensing</h2> <!-- 新增标题 -->
+    <div class="two-column">
+      <!-- 左侧视频 -->
+      <div class="video-container">
+        <video muted controls>
+          <source src="static/videos/active1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-subtitle">Large-Scale Disturbance</div>
+      </div>
+      <!-- 右侧视频 -->
+      <div class="video-container">
+        <video muted controls>
+          <source src="static/videos/active2.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-subtitle">Small-Scale Disturbance</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Dribbling Direction Change</h2> <!-- 新增标题 -->
     <div class="video-grid">
       <!-- 第一个视频 -->
@@ -461,30 +470,23 @@
   </div>
 </section>
 
- 
-<section class="section">
+ <!-- Paper abstract -->
+<section class="section hero is-light">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Ball Recovery via Active Sensing</h2> <!-- 新增标题 -->
-    <div class="two-column">
-      <!-- 左侧视频 -->
-      <div class="video-container">
-        <video muted controls>
-          <source src="static/videos/active1.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <div class="video-subtitle">Large-Scale Disturbance</div>
-      </div>
-      <!-- 右侧视频 -->
-      <div class="video-container">
-        <video muted controls>
-          <source src="static/videos/active2.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <div class="video-subtitle">Small-Scale Disturbance</div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Humanoid soccer dribbling is a highly challenging task that demands dexterous ball manipulation while maintaining dynamic balance. In RoboCup Soccer Competitions, traditional rule-based methods often struggle to achieve accurate ball control due to their reliance on fixed walking patterns and limited adaptability to real-time ball dynamics. To address these challenges, we propose a two-stage learning framework that enables a humanoid robot to acquire dribbling skills without relying on explicit dynamics or predefined trajectories. In the first stage, the robot learns basic locomotion skills; in the second stage, we fine-tune the policy for agile dribbling maneuvers. We further introduce a virtual camera model in simulation and design heuristic rewards to encourage active sensing, promoting a broader visual range for continuous ball perception. The policy is trained in simulation and successfully transferred to a physical humanoid robot. Experimental results demonstrate that our method enables effective ball manipulation, achieving flexible and visually appealing dribbling behaviors across multiple environments. This work highlights the potential of reinforcement learning in developing adaptive humanoid soccer robots.
+          </p>
+        </div>
       </div>
     </div>
   </div>
 </section>
+<!-- End paper abstract -->
+
   
 <!-- Video carousel -->
 <!--  <section class="hero is-small">
