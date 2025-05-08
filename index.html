@@ -145,6 +145,39 @@
       height: 3px;
       background: #3498db;
       } */
+
+  /* CSS 样式 */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9; /* 设置页面背景颜色 */
+      display: flex; /* 使用 flexbox 布局 */
+      justify-content: center; /* 水平居中 */
+      align-items: center; /* 垂直居中 */
+      height: 100vh; /* 页面高度占满视口 */
+    }
+
+    .acknowledgment-container {
+      text-align: center; /* 文本居中对齐 */
+      max-width: 600px; /* 限制容器宽度，避免过宽 */
+      padding: 20px; /* 添加内边距 */
+      background-color: #ffffff; /* 设置容器背景颜色 */
+      border-radius: 10px; /* 添加圆角效果 */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+    }
+
+    .acknowledgment-container h1 {
+      font-size: 2rem; /* 标题字体大小 */
+      color: #333; /* 标题字体颜色 */
+      margin-bottom: 1rem; /* 标题下方间距 */
+    }
+
+    .acknowledgment-container p {
+      font-size: 1.2rem; /* 正文字体大小 */
+      line-height: 1.6; /* 设置行高 */
+      color: #555; /* 正文字体颜色 */
+    }
     
   /* 响应式布局：在小屏幕下改为单列 */
   @media (max-width: 768px) {
@@ -539,6 +572,20 @@
     </div>
   </section> -->
 <!--End paper poster -->
+
+<body>
+  <!-- 致谢容器 -->
+  <div class="acknowledgment-container">
+    <h1>Acknowledgment</h1>
+    <p>
+      We would like to express our deepest gratitude to all the individuals and institutions who have contributed to the success of this project. 
+      Your support, guidance, and encouragement have been invaluable.
+    </p>
+    <p>
+      Special thanks to our research team, mentors, and sponsors for their dedication and contribution.
+    </p>
+  </div>
+</body>  
 
 
 <!--BibTex citation -->
